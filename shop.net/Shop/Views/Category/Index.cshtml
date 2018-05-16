@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @ViewBag.Category.ToString()
+    </div>
+    <div>
+        @foreach(var item in ViewBag.Products)
+        {
+            @item.Name 
+        }
+    </div>
+</body>
+</html>

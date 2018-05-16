@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <div><input type="hidden" value="0" /></div>
+            <div>
+                <select name="Id_parent">
+                    @foreach (var item in ViewBag.Categories)
+                    {
+                        <option id="@item.Id_parent">@item.Name</option>
+                    }
+                </select>
+            </div>
+            <div><input type="text" name="Name" /></div>
+            <input type="submit" value="add" />
+        </form>
+    </div>
+</body>
+</html>
