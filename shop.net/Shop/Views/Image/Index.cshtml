@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+    var newFileName = "";
+    var imagePath = "";
+    if (IsPost)
+    {
+        if (Request.Files.Count > 0)
+        {
+            for (int i = 0; i < Request.Files.Count; i++)
+            {
+                newFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(Request.Files.Get(i).FileName);
+                var pathToApp = AppDomain.CurrentDomain.BaseDirectory;
+                imagePath = pathToApp + @"Images\" + newFileName;
+                Request.Files[i].SaveAs(imagePath);
+            }
+        }
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../../Content/themes/explorer-fa/theme.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../../Scripts/plugins/sortable.js" type="text/javascript"></script>
+    <script src="../../Scripts/fileinput.js" type="text/javascript"></script>
+    <script src="../../Scripts/locales/fr.js" type="text/javascript"></script>
+    <script src="../../Scripts/locales/es.js" type="text/javascript"></script>
+    <script src="../../Content/themes/explorer-fa/theme.js" type="text/javascript"></script>
+    <script src="../../Content/themes/fa/theme.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+    
+    <form action="" method="post" enctype="multipart/form-data">
+            <label for="Image">Картинки</label>
+            <div class="form-group">
+                <div class="file-loading">
+                    <input id="files" name="Image" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="0">
+                </div>
+            </div>
+    </form>
+    <script>
+
+        $("#files").fileinput({
+            theme: 'fa',
+            allowedFileExtensions: ['jpg', 'png', 'gif', 'jpeg'],
+            overwriteInitial: false,
+            maxFileSize: 10000,
+            maxFilesNum: 10,
+            //allowedFileTypes: ['image', 'video', 'flash'],
+        });
+
+    </script>
+</body>
+</html>

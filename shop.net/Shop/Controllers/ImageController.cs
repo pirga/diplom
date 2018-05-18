@@ -11,7 +11,16 @@ namespace Shop.Controllers
         // GET: Image
         public ActionResult Index()
         {
-            return View("UploadImage");
+            return View();
         }
+        public ActionResult UploadImage()
+        {
+            return View();
+        }
+        public ActionResult test()
+        {
+            return View();
+        }
+            
     }
 }

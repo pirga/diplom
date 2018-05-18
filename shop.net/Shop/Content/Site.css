@@ -1,6 +1,5 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +20,14 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.product-image {
+    height: 300px;
+}
+.product-image img {
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: auto;
 }

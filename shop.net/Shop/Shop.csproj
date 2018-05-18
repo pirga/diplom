@@ -301,6 +301,24 @@
     <Content Include="Content\slick-theme.css" />
     <Content Include="Content\slick.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\themes\explorer-fas\theme.css" />
+    <Content Include="Content\themes\explorer-fas\theme.js" />
+    <Content Include="Content\themes\explorer-fas\theme.min.css" />
+    <Content Include="Content\themes\explorer-fas\theme.min.js" />
+    <Content Include="Content\themes\explorer-fa\theme.css" />
+    <Content Include="Content\themes\explorer-fa\theme.js" />
+    <Content Include="Content\themes\explorer-fa\theme.min.css" />
+    <Content Include="Content\themes\explorer-fa\theme.min.js" />
+    <Content Include="Content\themes\explorer\theme.css" />
+    <Content Include="Content\themes\explorer\theme.js" />
+    <Content Include="Content\themes\explorer\theme.min.css" />
+    <Content Include="Content\themes\explorer\theme.min.js" />
+    <Content Include="Content\themes\fas\theme.js" />
+    <Content Include="Content\themes\fas\theme.min.js" />
+    <Content Include="Content\themes\fa\theme.js" />
+    <Content Include="Content\themes\fa\theme.min.js" />
+    <Content Include="Content\themes\gly\theme.js" />
+    <Content Include="Content\themes\gly\theme.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -412,6 +430,8 @@
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Product\Add.cshtml" />
     <Content Include="Views\Image\UploadImage.cshtml" />
+    <Content Include="Views\Image\Index.cshtml" />
+    <Content Include="Views\Image\test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
